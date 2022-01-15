@@ -11,6 +11,9 @@ app.listen(PORT, () => {
     console.log(`Serving on port ${PORT}`)
 });
 
+// const wildrootsRoutes = require('./routes/wildroots');
+// const blogRoutes = require('./routes/blog');
+
 //View engine setup
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
@@ -28,6 +31,13 @@ app.use(express.static(__dirname + "/public", {
     maxAge: "30d"
 }));
 
+// app.use('/', wildrootsRoutes);
+// app.use('/blog', blogRoutes)
+
 app.get('/', (req, res) => {
     res.render('home.ejs', {title: "Wildroots Kitchen & Bar"})
+});
+
+app.get('/sustainability', (req, res) => {
+    res.render('sustainability.ejs', {title: "Wildroots Kitchen & Bar"})
 })
