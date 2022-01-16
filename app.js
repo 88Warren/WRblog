@@ -1,8 +1,19 @@
 const express = require('express');
 const ejsMate = require('ejs-mate');
 const path = require('path');
-const bodyParser = require('body-parser');
-const { getDefaultSettings } = require('http2');
+const mongoose = require ('mongoose');
+
+// mongoose.connect('mongodb://localhost:27017/blog', {
+//     useNewUrlParser: true,
+//     useCreateindex: true,
+//     useUnifiedTopology: true
+// });
+
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "connection error:"));
+// db.once("open", () => {
+//     console.log("Database connected");
+// });
 
 const app = express();
 
@@ -11,8 +22,8 @@ app.listen(PORT, () => {
     console.log(`Serving on port ${PORT}`)
 });
 
-// const wildrootsRoutes = require('./routes/wildroots');
-// const blogRoutes = require('./routes/blog');
+const wildrootsRouter = require('./routes/wildroots');
+const blogRouter = require('./routes/blog');
 
 //View engine setup
 app.engine('ejs', ejsMate)
@@ -31,13 +42,7 @@ app.use(express.static(__dirname + "/public", {
     maxAge: "30d"
 }));
 
-// app.use('/', wildrootsRoutes);
-// app.use('/blog', blogRoutes)
+app.use('/', wildrootsRouter);
+app.use('/blog', blogRouter)
 
-app.get('/', (req, res) => {
-    res.render('home.ejs', {title: "Wildroots Kitchen & Bar"})
-});
 
-app.get('/sustainability', (req, res) => {
-    res.render('sustainability.ejs', {title: "Wildroots Kitchen & Bar"})
-})

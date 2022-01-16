@@ -158,18 +158,6 @@ a:hover{
     height: 150px;
 }
 
-/* .specialQuotes{
-    font-size: 36px;
-    font-weight: 900;
-}
-
-.specialP{
-    display: inline-block;
-    position: right;
-    padding-bottom: 20px;
-    font-weight: 900;
-} */
-
 /*Home Page*/
 /*hero image*/
 .hp{
@@ -401,6 +389,254 @@ a:hover{
     padding-top: 2em;
 }
 
+/* downloads */
+.D{
+    grid-template-areas: "heroD";
+}
+
+.DImage{
+    grid-area: heroD;
+    background-image: url("../images/downloads/download.jpg");
+    background-position: center left;
+    display: flex;
+}
+
+.blurbD{
+    font-family: 'dual', Fallback, sans-serif;
+    padding: 20px;
+    letter-spacing: 1px;
+    line-height: 2.5em;
+    margin: 1em;
+    text-align: center;
+    font-weight: 550;
+}
+
+.niftyGuide{
+    margin:0 auto;
+    display: block;
+}
+
+.niftyGuide p{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding-bottom: 1em;
+}
+
+.niftyGuide button{
+    margin:0 auto;
+    display: block;
+    height: 3em;
+    width: 13em;  
+    padding-bottom: 3.5em;
+}
+
+.niftyGuide a{
+    color: #000;
+}
+
+.explaination{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+    margin: 1em;
+    padding-bottom: 1em;
+}
+
+.downloadMain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 1em;
+    grid-template-areas: 
+    "menus party"
+    "romantic wedding";
+}
+
+.menus{
+    grid-area: menus;
+}
+
+.virtualParty{
+    grid-area: party;
+}
+
+.romanticNight{
+    grid-area: romantic;
+}
+
+.weddingMenu{
+    grid-area: wedding;
+}
+
+.menus, .virtualParty, .romanticNight, .weddingMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    font-family: 'dual', Fallback, sans-serif;
+    grid-template-areas: 
+    "trust"
+    "leader";
+}
+
+.trust{
+    grid-area: trust;
+}
+
+.trust p{
+    font-family: 'dual', Fallback, sans-serif;
+    text-align: center;
+    line-height: 2.5em;
+    letter-spacing: 1px;
+}
+
+.trust button{
+    margin:0 auto;
+    display: block;
+    height: 3em;
+    width: 13em;  
+    margin-top: 2em;
+    padding-bottom: 3.5em;
+}
+
+.theLeader{
+    grid-area: leader;
+}
+
+.theLeader h2, .feedback h2{
+    margin-top: 2em;
+    text-align: center;
+    font-family: 'dual', Fallback, sans-serif;
+}
+
+.theLeader h2{
+    margin-bottom: 1.2em;
+}
+
+.allLinks{
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.tLinks{
+    margin-left: 1.2em;
+}
+
+.fbLink{
+    margin:0 1.2em;
+}
+
+/*contact page*/
+.C{
+    grid-template-areas: "heroC";
+}
+
+.CImage{
+    grid-area: heroC;
+    background-image: url("../images/contact/phone.jpg");
+    background-position: center center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr;
+    grid-template-areas: "phone form .";
+    line-height: 1.6;
+    font-family: 'dual', Fallback, sans-serif;
+    margin: auto;
+    padding: 5px;
+    background-color: white;
+}
+
+.heading{
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'amsterdam', fallback, brush script MT;
+}
+
+.companyInfo{
+    grid-area: phone;
+    background-color: #cb5827;
+    line-height: 2;
+}
+
+.companyInfo ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    font-size: 20px;
+}
+
+.companyInfo span{
+    font-weight: 900;
+}
+
+.contact{
+    grid-area: form;
+}
+
+/* form styles */
+.contact form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+.contact label{
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.contact form p{
+    margin: 0 auto;
+}
+
+.contact input, textarea{
+    height: 35px;
+    width: 350px;
+    padding: 2px;
+    margin-top: 3px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font: 100 20px 'dual';
+}
+
+.contact input:focus, textarea:focus{
+    border: 1px solid black;
+}
+
+.contact textarea{
+    width: 350px; 
+    height: 103px;
+    resize: none;
+}
+
+.error span{
+    color: red;
+}
+
+.success div{
+    color: orange;
+    text-align: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+
 /*all desktops*/
 @media (min-width: 1200px){
     /*Home Page*/
@@ -424,7 +660,7 @@ a:hover{
      /*Sustainability*/
      .sustainableMain{grid-template-columns: 1fr 1fr; grid-template-rows: auto; gap: 25px; grid-template-areas: "plant compost" "workwear shop" "plastic plastic"; margin-left: 15px; margin-right: 15px;} 
      .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
-}
+    }
 
 /*Small desktop*/
 @media (max-width:800px){
@@ -451,6 +687,10 @@ a:hover{
     .blurbSC img{margin: auto;}
     .T h1{font-size: 25px;}
     .sustainableMain p{margin: 10px;}
+    /*Contact*/
+    .container{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "phone" "form";}
+    /*Form Styles*/
+    .contact form{padding-left: 0;}
 }
 
 /*Tablet*/
@@ -479,6 +719,17 @@ a:hover{
     .sustainableMain{grid-template-columns: 1fr; gap: 15px; grid-template-areas:"plant" "compost" "workwear" "shop" "plastic"} 
     .sustainableMain p{margin: auto;}
     .textbox{grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "textbox" "button";}
+    /* downloads */
+    .downloadMain{grid-template-columns: 1fr; grid-template-areas: "menus" "party" "romantic" "wedding";}
+    /*Contact*/
+    .heroC h1{font-size: 26px;}
+    .heading h1{font-size: 28px;}
+    .companyInfo ul{font-size: 16px;}
+    /*Form Styles*/
+    .contact form{gap: 10px;}
+    .contact label{font-size: 18px; font-weight: 800;}
+    .contact input, textarea{height: 30px; width: 325px; font: 100 16px 'dual';}
+    .contact textarea{height:95px; width: 325px;}
 }
 
 /*mobile*/
@@ -507,4 +758,11 @@ a:hover{
      .T h1{font-size: 13px; letter-spacing:none; gap: 2px;}
      .sustainableMain p{margin: 10px;}
      .textboxP{font-size: 14px;}
+      /*Contact*/
+    .heading h1{font-size: 20px;}
+    .companyInfo ul{font-size: 14px;}
+    /*Form Styles*/
+    .contact label{font-size: 16px; font-weight: 700;}
+    .contact input, textarea{height: 25px; width: 300px; font: 100 14px 'dual';}
+    .contact textarea{height:80px; width: 300px;}
 }
