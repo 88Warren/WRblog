@@ -1,0 +1,33 @@
+<% layout('partials/boilerplate') %>
+
+<div class="hero B">
+    <div class="heroImage BImage"><h1>New Blog Post</h1></div>
+</div>
+
+<div>
+    <form action="/blogs" method="POST" novalidate class="validatedForm">
+        <div class="contact">
+            <div>
+                <label for="image">Image Url</label>
+                <input type="text" id="image" name="blog[image]" required>
+            </div>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="blog[title]" required>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea type="text" name="blog[description]" id="description" required></textarea>
+            </div>
+            <div>
+                <label for="markdown"></label>
+                <textarea type="text" name="description" id="markdown" required></textarea>
+            </div>
+        </div>
+        
+        <a href="/blogs"><button>Cancel</button></a>
+        <button type="submit">Save</button>
+        <div>
+            <a href="/blogs">All Blogs</a>
+    </form>
+</div>

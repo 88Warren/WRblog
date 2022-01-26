@@ -1,0 +1,29 @@
+<% layout('partials/boilerplate') %>
+
+<div class="hero B">
+    <div class="heroImage BImage"><h1>Edit Blog Post</h1></div>
+</div>
+
+<div>
+    <form action="/blogs/<%= blog._id %>?_method=PUT" method="POST" novalidate class="validatedForm">
+        <div>
+            <label for="image">Image Url</label>
+            <input type="text" id="image" name="blog[image]" value="<%=blog.image %>" required>
+        <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="blog[title]" value="<%=blog.title %>" required>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea type="text" name="blog[description]" id="description" required><%= blog.description%></textarea>
+        </div>
+        <div>
+            <label for="markdown"></label>
+            <textarea type="text" name="blog[markdown]" id="markdown" required><%= blog.markdown%></textarea>
+        </div>
+        <div>
+            <button>Update Blog</button>
+        </div>
+    </form>
+        <a href="/blogs/<%= blog._id%>">Back To Blogs</a>
+</div>

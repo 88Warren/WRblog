@@ -7,15 +7,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/sustainability', (req, res) => {
-    res.render('sustainability', {title: "Wildroots Kitchen & Bar"});
+    res.render('sustainability');
 });
 
 router.get('/download', (req, res) => {
-    res.render('download', {title: "Wildroots Kitchen & Bar"})
+    res.render('download')
 });
 
 router.get('/contact', (req, res) => {
-    res.render('contact', {title: "Wildroots Kitchen & Bar"})
+    res.render('contact')
 });
 
 router.post('/contact/send', (req, res) => {

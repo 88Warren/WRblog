@@ -1,0 +1,30 @@
+<% layout('partials/boilerplate') %>
+
+<div class="hero B">
+    <div class="heroImage BImage"><h1>Blog</h1></div>
+</div>
+
+<div class="new">
+   <a href="/blogs/new"><button>New Blog</button></a>
+</div>
+
+<div>
+    <% for (let blog of blogs) { %>
+        <div>
+            <img alt="" src="<%=blog.image%>">
+        </div>
+        <div>
+            <h1><a href="/blogs/<%= blog._id %>"><%= blog.title %></a></h1>
+        </div>
+
+        <div>
+            <p><%= blog.description %></p>
+        </div>
+
+        <div>
+            <a href="blogs/<%= blog._id %>"><button>Read More</button></a>
+            <a href="blogs/<%= blog._id %>/edit"><button>Edit</button></a>
+            <form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form>
+        </div>
+    <% } %>
+</div>

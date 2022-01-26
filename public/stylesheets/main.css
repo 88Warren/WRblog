@@ -637,6 +637,22 @@ a:hover{
     font-size: 14px;
 }
 
+/* blog */
+.B{
+    grid-template-areas: "heroB";
+}
+
+.BImage{
+    grid-area: heroB;
+    /* background-image: url("../images/blog/heroImage.jpg"); */
+    background-position: center left;
+    display: flex;
+}
+
+.new{
+    margin: 2em;
+}
+
 /*all desktops*/
 @media (min-width: 1200px){
     /*Home Page*/
